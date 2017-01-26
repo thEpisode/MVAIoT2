@@ -61,7 +61,7 @@ function initialize(io, ioClient, globals, serialport) {
 	console.log('Socket.io initialized');
 
 	function mvaiotbackendMessageHub(data) {
-		console.log('MVAIoTBackend catched: MVAIoTBackend.Message');
+		//console.log('MVAIoTBackend catched: MVAIoTBackend.Message');
 		var values = data.Values;
 		var command = data.Command;
 		switch (command) {
@@ -70,7 +70,7 @@ function initialize(io, ioClient, globals, serialport) {
 					if (err) {
 						return console.log('Error on write: ', err.message);
 					}
-					console.log('this is a fucking beep');
+					console.log('Beeep!');
 				});
 				
 
