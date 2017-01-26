@@ -23,7 +23,7 @@ var http = require('http');
 var options = {
   host: 'mvaiot2backend.azurewebsites.net',
   port: 80,
-  path: '/api/Insight/Create/1000/hola'
+  path: '/api/Insight/Create/1000/facebook'
 };
 
 var app = express();
@@ -319,13 +319,13 @@ function receivedMessage(event) {
         if(messageText == 'beep'){
           http.get(options, function(resp){
             resp.on('data', function(chunk){
-              //do something with chunk
+              sendTextMessage(senderID, messageText);
             });
           }).on("error", function(e){
             console.log("Got error: " + e.message);
           });
         }
-        sendTextMessage(senderID, messageText);
+        
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
