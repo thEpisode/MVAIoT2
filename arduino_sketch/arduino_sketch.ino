@@ -19,7 +19,7 @@ void setup() {
 void loop() {
   if (Serial.available() > 0){
 
-    String first  = Serial.readStringUntil('|');
+    String first  = Serial.readStringUntil('+');
     Serial.read();
     String second  = Serial.readStringUntil('\0');
     
