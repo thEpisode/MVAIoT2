@@ -46,8 +46,14 @@ function Socket(dependencies) {
         });
     }
 
+    var sendBeep = function(data, callback){
+        _io.sockets.emit('MVAIoTBackend.Message', data);
+        callback();
+    }
+
     return {
-        Initialize: constructor
+        Initialize: constructor,
+        SendBeep: sendBeep
     }
 }
 

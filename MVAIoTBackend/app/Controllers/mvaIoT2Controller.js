@@ -27,6 +27,10 @@ function MVAIoT2Server(dependencies) {
         /// Setting up secret for JWT
         _app.set('MVAIoT2SecretJWT', _cross.GetMVAIoT2SecretJWT());
 
+        /// Socket declaration
+        _socketController = require('./socketController')(dependencies);
+        dependencies.socket = _socketController;
+
         /// Database declaration
         _databaseController = require('./databaseController')(dependencies);
         dependencies.database = _databaseController;
@@ -37,11 +41,10 @@ function MVAIoT2Server(dependencies) {
                 /// Frontend declaration
                 _frontendController = require('./frontendController')(dependencies);
 
+
                 /// Routes declaration
                 _routesController = require('./routesController')(dependencies);
 
-                /// Socket declaration
-                _socketController = require('./socketController')(dependencies);
 
                 initializeControllers();
 
