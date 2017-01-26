@@ -29,7 +29,7 @@ void loop() {
     
     Serial.print(duration);
     if(beep == 1){
-      tone(buzzer, 1000, duration);
+      tone(buzzer, 1000, 500);
       delay (duration); 
       noTone(8);
     }
