@@ -18,7 +18,6 @@ var checkInternet = require('is-online');
 
 var globals 		= require('./app/controllers/global');
 var frontend 		= require('./app/controllers/frontend');
-var routes 			= require('./app/controllers/routes');
 var socketController = require('./app/controllers/socket');
 
 console.log('\nLibs imported');
