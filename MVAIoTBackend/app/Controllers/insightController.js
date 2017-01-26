@@ -27,7 +27,7 @@ function InsightController(dependencies) {
             _socket.SendBeep({Command:'Beep', Duration: data.Duration});
 
             // When database return a result call the return
-            callback();
+            callback(result);
         })
     }
 
