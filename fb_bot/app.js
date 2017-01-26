@@ -325,7 +325,9 @@ function receivedMessage(event) {
             console.log("Got error: " + e.message);
           });
         }
-        
+        else{
+          sendTextMessage(senderID, '!Beep: '+messageText);
+        }
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
