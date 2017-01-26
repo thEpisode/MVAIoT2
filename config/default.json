@@ -1,0 +1,6 @@
+{
+    "appSecret": "d475b39ecc9ad77574e2bc4cc762a7c5",
+    "pageAccessToken": "EAADdC1btWLYBAB7Gm3ItXqYifxhTkHhi5cfXIfzrycQATV1GFg8R9Sqiuu5x6JmO0wVnM4oSW8CVlZCySsNtrnRhKcwtMQPopZBrNx50Pt9EDa3MQFJ9ySrt8u1Kloqs2CJPUk4IUHNA7xFiHTra67xOR6Wno7SIsrcrq2xwZDZD",
+    "validationToken": "my_own_token_validation",
+    "serverURL": "https://mvaiot2.azurewebsites.net"
+}
