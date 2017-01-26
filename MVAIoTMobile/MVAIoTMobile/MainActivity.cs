@@ -28,7 +28,7 @@ namespace MVAIoTMobile
         public static EmotionServiceClient _emotionServiceClient;
         public static Emotion[] _emotionResult;
 
-        public static string IOT_API = "";
+        public static string IOT_API = "http://mvaiot2backend.azurewebsites.net/api/Insight/Create/1000/hola";
     }
 
     public static class BitmapHelpers
