@@ -17,6 +17,7 @@
     "socket.io": "latest",
     "socket.io-client": "latest",
     "is-online": "latest",
-    "ejs": "latest"
+    "ejs": "latest",
+    "serialport": "latest"
   }
 }

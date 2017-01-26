@@ -21,7 +21,9 @@ var frontend = require('./app/controllers/frontend');
 var socketController = require('./app/controllers/socket');
 
 var SerialPort = require("serialport").SerialPort;
-var serialport = new SerialPort("/dev/ttyACM0");
+var serialport = new SerialPort("/dev/ttyACM0",{
+  baudRate: 9600
+});
 
 console.log('\nLibs imported');
 
