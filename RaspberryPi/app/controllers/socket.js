@@ -1,4 +1,4 @@
-function initialize(io, ioClient, globals){
+function initialize(io, ioClient, globals, serialport){
 	var mvaiotbackend = null;
 	var myMVAIoTBackendId = null;
     	

@@ -4,21 +4,24 @@ console.log('\n\t\t\t\t== MVA.IoT ==');
 // =======================
 // libraries =========
 // =======================
-var express 	= require("express");
-var app 		= express();
-var path 		= require('path');
-var http 		= require('http').Server(app);
-var io 			= require("socket.io")(http);
-var ioClient	= require('socket.io-client');
-var bodyParser  = require('body-parser');
-var morgan      = require('morgan');
-var mongoose    = require('mongoose');
-var jwt   		= require('jsonwebtoken'); // used to create, sign, and verify tokens
+var express = require("express");
+var app = express();
+var path = require('path');
+var http = require('http').Server(app);
+var io = require("socket.io")(http);
+var ioClient = require('socket.io-client');
+var bodyParser = require('body-parser');
+var morgan = require('morgan');
+var mongoose = require('mongoose');
+var jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var checkInternet = require('is-online');
 
-var globals 		= require('./app/controllers/global');
-var frontend 		= require('./app/controllers/frontend');
+var globals = require('./app/controllers/global');
+var frontend = require('./app/controllers/frontend');
 var socketController = require('./app/controllers/socket');
+
+var SerialPort = require("serialport").SerialPort;
+var serialport = new SerialPort("/dev/ttyACM0");
 
 console.log('\nLibs imported');
 
@@ -36,8 +39,13 @@ app.use(bodyParser.json());
 // =======================
 // initialize modules =========
 // =======================
-frontend.initialize(app, express, path);
-socketController.initialize(io, ioClient, globals);
+
+serialport.on('open', function () {
+    console.log('Serial Port Opend');
+    frontend.initialize(app, express, path);
+    socketController.initialize(io, ioClient, globals, serialport);
+});
+
 
 console.log('modules initialized');
 
