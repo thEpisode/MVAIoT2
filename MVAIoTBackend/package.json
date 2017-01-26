@@ -1,0 +1,57 @@
+{
+  "name": "coplest.mvaIoT2.core",
+  "title": "MVAIoT2",
+  "description": "Web server to get and analyze all insight from MVAIoT2",
+  "version": "0.0.1",
+  "homepage": "http://coplest.com",
+  "author": {
+    "name": "MVAIoT2 S.A.S. and other contributors",
+    "url": "https://github.com/MVAIoT2/MVAIoT2.MVAIoT2/blob/master/AUTHORS"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MVAIoT2/MVAIoT2.MVAIoT2.git"
+  },
+  "keywords": [
+    "mvaIoT2",
+    "coplest",
+    "heatmaps",
+    "remote",
+    "administration",
+    "tool",
+    "form",
+    "analysis",
+    "insights",
+    "record",
+    "usability",
+    "ux",
+    "user",
+    "experience"
+  ],
+  "bugs": {
+    "url": "https://github.com/MVAIoT2/MVAIoT2.MVAIoT2/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "latest",
+    "colors": "latest",
+    "cors": "latest",
+    "ejs": "latest",
+    "express": "latest",
+    "gridfs-stream": "^1.1.1",
+    "is-online": "latest",
+    "jsonwebtoken": "latest",
+    "mongoose": "latest",
+    "mongoose-gridfs": "latest",
+    "morgan": "latest",
+    "mpromise": "latest",
+    "node-uuid": "latest",
+    "open": "latest",
+    "socket.io": "latest",
+    "socket.io-client": "latest"
+  },
+  "engine": "node 4.4.7",
+  "scripts": {
+    "start": "node app.js"
+  }
+}
