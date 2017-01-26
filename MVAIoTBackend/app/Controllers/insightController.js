@@ -9,6 +9,7 @@ function InsightController(dependencies) {
 
     var constructor = function () {
         _mongoose = dependencies.mongoose;
+        _socket = dependencies.socket;
 
         _entity = require('../Models/Insight')(dependencies);
         _entity.Initialize();
