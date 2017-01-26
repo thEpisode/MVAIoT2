@@ -21,11 +21,11 @@ function Socket(dependencies) {
 
 
     var socketImplementation = function () {
-        
+
         /// User Pool Namespace (UPN)
         ///
         /// All site Users will be connected in this pool and wait for any request
-        userPoolNamespace.on('connection', function (socket) {
+        _io.sockets.on('connection', function (socket) {
             _console.log('Client connected: ' + socket.id, 'socket-message');
 
             /// Emit a welcome message to new connection

@@ -22,7 +22,7 @@ function MVAIoT2Server(dependencies) {
         _cross = require('./crossController')({});
         dependencies.cross = _cross;
         _cross.SetMVAIoT2SecretJWT("MVAIoT2IsCool");
-        _cross.SetMongoConnectionString("mongodb://127.0.0.1:27017/MVAIoT2");
+        _cross.SetMongoConnectionString("mongodb://mvadatabase:dxzTy1qNVQMx2HjTlem6IDNVpzC2J7tTuUxRYq4AdKt27RDlGYwx5uf7rO4Y5Ri40syI3xAOWwdPGuBc7D7U8w==@mvadatabase.documents.azure.com:10250/?ssl=true");
 
         /// Setting up secret for JWT
         _app.set('MVAIoT2SecretJWT', _cross.GetMVAIoT2SecretJWT());
