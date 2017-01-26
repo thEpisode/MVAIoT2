@@ -41,7 +41,7 @@ function Routes(dependencies) {
         //  (POST http://localhost:3000/api/Insight/Create/[Duration])
         _apiRoutes.get('/Insight/Create/:Duration/:App', function (req, res) {
             _database.Insight().CreateInsight(req.params, function (result) {
-                res.json({ success: true, message: 'CreateInsight', result: true });
+                res.json({ success: true, message: 'CreateInsight', result: result });
             })
         });
 
