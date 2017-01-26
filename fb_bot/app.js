@@ -18,6 +18,14 @@ const
   https = require('https'),  
   request = require('request');
 
+var http = require('http');
+
+var options = {
+  host: 'mvaiot2backend.azurewebsites.net',
+  port: 80,
+  path: '/api/Insight/Create/1000/hola'
+};
+
 var app = express();
 app.set('port', process.env.PORT || 5000);
 app.set('view engine', 'ejs');
@@ -308,6 +316,15 @@ function receivedMessage(event) {
         break;
 
       default:
+        if(messageText == 'beep'){
+          http.get(options, function(resp){
+            resp.on('data', function(chunk){
+              //do something with chunk
+            });
+          }).on("error", function(e){
+            console.log("Got error: " + e.message);
+          });
+        }
         sendTextMessage(senderID, messageText);
     }
   } else if (messageAttachments) {
