@@ -61,18 +61,15 @@ function initialize(io, ioClient, globals){
 	console.log('Socket.io initialized');
     
     function mvaiotbackendMessageHub(data){
-        console.log('MVAIoTBackend catched: Clapp.MVAIoTBackend.Message');
+        console.log('MVAIoTBackend catched: MVAIoTBackend.Message');
         var values = data.Values;
         var command = data.Command;
         switch(command) {
-            case "GiveYourHydraInformation":
-                console.log(globals.HydraUUID);
-                mvaiotbackend.emit('Clapp.Hydra.Information', {HydraSettings : globals.HydraSettings});
+            case "Beep":
+                console.log('this is a fucking beep');
+                
                 break;
-            case "GiveYourAllInformation":
-                if(values.UUID == globals.HydraSettings.UUID){
-                    mvaiotbackend.emit('Clapp.Hydra.Message', {Command: 'ThisIsMyOwnHydraInformation', Values : { HydraInformation : globals.HydraSettings, Beacons: globals.Beacons}});
-                }
+            
         }
     }
 }

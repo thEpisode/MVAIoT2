@@ -23,7 +23,7 @@ function InsightController(dependencies) {
             });
 
         insight.save().then(function (result) {
-            _socket.SendBeep({Duration: data.Duration});
+            _socket.SendBeep({Command:'Beep', Duration: data.Duration});
 
             // When database return a result call the return
             callback();
