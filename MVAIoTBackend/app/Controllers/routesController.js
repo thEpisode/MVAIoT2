@@ -48,7 +48,7 @@ function Routes(dependencies) {
         /// Middleware
         /// -------------------------
         //  To verify a token
-        _apiRoutes.use(function (req, res, next) {
+        /*_apiRoutes.use(function (req, res, next) {
             // check header or url parameters or post parameters for token
             var token = req.body.token || req.query.token || req.headers['x-access-token'];
 
@@ -77,7 +77,7 @@ function Routes(dependencies) {
                 });
 
             }
-        });
+        });*/
 
         /// Welcome
         /// -------------------------
